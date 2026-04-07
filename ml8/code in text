@@ -1,0 +1,7 @@
+import pandas as pd
+import seaborn as sns
+!pip install ydata-profiling
+from ydata_profiling import ProfileReport
+df=sns.load_dataset('iris')
+data=ProfileReport(df)
+data.to_file(output_file='output.html')
